@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html
+  class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+  lang="en" style="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rebecca Young">
+  <meta name="description" content="Tina Ipsum: Lorem Ipsum Generator">
+  <meta name="keywords" content="lorem ipsum, Tina Belcher, Bob&#39;s Burgers">
+  <title>Tina Ipsum</title>
+  <link rel="stylesheet" type="text/css" href="./assets/reset.min.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./assets/modernizr.min.js"></script>
+  <link href="./assets/css" rel="stylesheet" type="text/css">
+  <link href="./assets/css(1)" rel="stylesheet" type="text/css">
+  <script>
+    document.createElement('picture');
+  </script>
+  <script src="./assets/picturefill.js" async=""></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+  <div class="container">
+    <header class="header center-text">
+      <picture class="tina-face">
+        <source media="(min-width: 1024px)" srcset="images/face-desktop.png">
+        <img srcset="images/face-mobile.png" alt="Tina&#39;s Face">
+      </picture>
+      <h1 class="title">Tina Ipsum</h1>
+      <p class="quattrocento">Uhhhhhhhhhhhhhhhhhhhhh......<br>Lorem Ipsum Generator filled with quotes from yours truly,
+        Tina Belcher.</p>
+    </header>
+    <main role="main" class="generator group quattrocento">
+      <aside class="sidebar center-text">
+        <figure class="tina-pic group">
+          <figcaption id="tina-caption" class="quattrocento"></figcaption>
+          <picture class="tina-pic-img">
+            <source media="(min-width: 1024px)" srcset="images/tina.png">
+            <img srcset="images/tina-sm.png" alt="Tina Belcher">
+          </picture>
+        </figure>
+      </aside>
+      <div class="generator-content">
+        <form id="generator-form" class="generator-form center-text">
+          <input type="text" id="para-num" name="para-num" value="3">
+          <label for="para-num" class="quattrocento">paragraphs</label>
+          <p id="error-message" class="error-message">You must enter a number!</p>
+
+          <div class="radio">
+            <span class="radio-button">
+              <input type="radio" name="para-length" value="9" checked="checked" id="radio-long"> Long
+            </span>
+            <span class="radio-button">
+              <input type="radio" name="para-length" value="7" id="radio-med"> Medium
+            </span>
+            <span class="radio-button">
+              <input type="radio" name="para-length" value="5" id="radio-short"> Short
+            </span>
+          </div>
+
+          <div class="checkboxes">
+            <input type="checkbox" id="hi-boys" name="hi-boys" value="hi-boys" checked="checked">
+            <label for="hi-boys">Start with: "Hi Boys, I'm Tina."</label>
+            <br>
+            <input type="checkbox" id="extra-sass" name="extra-sass" value="extra-sass">
+            <label for="extra-sass">Extra sass.</label>
+          </div>
+          <button type="submit" id="generate-button" class="button quattrocento">Generate!</button>
+        </form>
+
+        <section id="text-area" class="quattrocento"></section>
+        <div class="copy-section">
+          <p class="quattrocento" id="confirm-copy">Copied to clipboard!</p>
+          <button id="copy-button" data-clipboard-target="#text-area" class="button quattrocentro">Copy to
+            Clipboard</button>
+
+        </div>
+      </div>
+    </main>
+    <footer class="footer center-text">
+      <p class="quattrocento">©2014
+        <a href="http://rebeccayoung.me/">Rebecca Young,</a> Tina's biggest fan</p>
+      <p class="quattrocento">All artwork and quotes ©Bob's Burgers</p>
+    </footer>
+  </div>
+  <script src="./assets/jquery.min.js"></script>
+  <!-- <script src="./assets/ZeroClipboard.min.js"></script> -->
+  <script src="./assets/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+
+  <script>
+
+
+    var clipboard = new ClipboardJS('#copy-button')
+    $(document).ready(function () {
+      $("#copy-button").click(function () {
+        $(this).html("copied");
+        setTimeout(() => { // use arrow function
+          $(this).text('Copy to Clipboard')
+        }, 2000);
+      });
+    });
+
+    clipboard.on('success', function (e) {
+      setTimeout(() => { // use arrow function
+        e.clearSelection();
+      }, 100);
+
+    });
+
+    clipboard.on('error', function (e) {
+
+    });
+
+  </script>
+
+</body>
+
+</html>
